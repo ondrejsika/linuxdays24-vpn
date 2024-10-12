@@ -20,6 +20,10 @@ On port 80 (linux only)
 docker run -d --name hello-linuxdays --net host -e PORT=80 sikalabs/hello-world-server:linuxdays
 ```
 
+## Cloudflare Access
+
+https://linuxdays-cloudflare-access.sikademo.com/
+
 ## WireGuard
 
 ### Generate config
