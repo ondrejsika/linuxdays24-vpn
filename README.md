@@ -2,6 +2,12 @@
 
 ## Run Hello LinuxDays
 
+Locally
+
+```bash
+COLOR='#FAAF3A' BACKGROUND_COLOR='#EEEEEE' TEXT='Hello LinuxDays!' hello-world-server
+```
+
 On port 8000
 
 ```bash
