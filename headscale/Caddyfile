@@ -1,0 +1,7 @@
+:443 {
+  bind 0.0.0.0
+  tls internal {
+    on_demand
+  }
+  reverse_proxy 127.0.0.1:8080
+}
