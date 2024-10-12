@@ -14,6 +14,48 @@ On port 80 (linux only)
 docker run -d --name hello-linuxdays --net host -e PORT=80 sikalabs/hello-world-server:linuxdays
 ```
 
+## WireGuard
+
+### Generate config
+
+https://www.wireguardconfig.com/
+
+### Install WireGuard
+
+```bash
+apt install -y wireguard
+```
+
+### Server
+
+```bash
+scp wireguard/server.conf root@wg.sikademo.com:/etc/wireguard/wg0.conf
+```
+
+Start WireGuard
+
+```
+systemctl enable wg-quick@wg0 --now
+```
+
+Restart WireGuard
+
+```
+systemctl restart wg-quick@wg0
+```
+
+### Client
+
+```bash
+scp wireguard/client1.conf root@vm1.sikademo.com:/etc/wireguard/wg0.conf
+```
+
+Start WireGuard
+
+```
+systemctl enable wg-quick@wg0 --now
+```
+
 ## Tailscale
 
 ### Install Tailscale Client
